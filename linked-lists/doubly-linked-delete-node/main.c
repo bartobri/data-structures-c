@@ -14,7 +14,11 @@ int main(void) {
 		x = insert_after(x, new_link(i));
 	}
 	
+	// Deletes node after head (returns deleted node)
 	x = delete_after(head);
+
+	// Freeing memory
+	free_link(x);
 	
 	return 0;
 }

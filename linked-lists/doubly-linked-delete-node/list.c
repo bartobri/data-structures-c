@@ -30,3 +30,7 @@ link delete_after(link x) {
 	
 	return t;
 }
+
+void free_link(link x) {
+	free(x);
+}

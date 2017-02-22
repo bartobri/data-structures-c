@@ -15,6 +15,9 @@ int main(void) {
 	
 	// Deletes node after head (returns deleted node)
 	x = delete_after(head);
+
+	// Freeing memory
+	free_link(x);
 	
 	return 0;
 }

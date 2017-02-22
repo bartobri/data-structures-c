@@ -11,5 +11,6 @@ struct node {
 link new_link(int);
 link insert_after(link, link);
 link delete_after(link);
+void free_link(link);
 
 #endif

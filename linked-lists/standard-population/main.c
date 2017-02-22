@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "list.h"
 
 #define N 10

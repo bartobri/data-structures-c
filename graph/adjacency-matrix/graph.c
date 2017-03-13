@@ -20,6 +20,7 @@ void graphInit(int S) {
 
 void graphSet(int r, int c) {
 	adj[r][c] = 1;
+	adj[c][r] = 1;
 }
 
 int graphGet(int r, int c) {

@@ -1,16 +1,16 @@
 #include <stdlib.h>
-#include <stdio.h>
-#include "Item.h"
 #include "STACK.h"
+
+typedef tnode stackItem;
 
 typedef struct STACKnode *link;
 struct STACKnode {
-		Item item;
+		stackItem item;
 		link next;
 };
 static link head;
 
-link NEW(Item item, link next) {
+link NEW(stackItem item, link next) {
 	link x = malloc(sizeof(*x));
 	if (x != NULL) {
 		x->item = item;
@@ -33,12 +33,12 @@ int STACKcount(void) {
 	return i;
 }
 
-void STACKpush(Item item) {
+void STACKpush(stackItem item) {
 	head = NEW(item, head);
 }
 
-Item STACKpop(void) {
-	Item item = head->item;
+stackItem STACKpop(void) {
+	stackItem item = head->item;
 	link t = head->next;
 	free(head);
 	head = t;

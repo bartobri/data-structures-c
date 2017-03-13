@@ -1,11 +1,13 @@
 #ifndef STACK_H
 #define STACK_H 1
 
-#include "Item.h"
+#include "TREE.h"
+
+typedef tnode stackItem;
 
 void STACKinit(void);
 int  STACKcount(void);
-void STACKpush(Item);
-Item STACKpop(void);
+void STACKpush(stackItem);
+stackItem STACKpop(void);
 
 #endif

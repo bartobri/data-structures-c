@@ -9,8 +9,6 @@
 int main(void) {
 	int i;
 	Item a[N];
-	struct timespec t1, t2;
-	long diff;
 	
 	srand(time(NULL));
 	

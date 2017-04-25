@@ -24,26 +24,37 @@ void STinsert(Item item) {
 	st[i] = item;
 }
 
-Item STsearch(Key v) {
-	int i;
-	Item x = malloc(sizeof(*x));
+Item STsearchR(int l, int r, Key v) {
+	int m = (l+r)/2;
 	
-	x->key = v;
-	
-	for (i = 0; i < N; ++i) {
-		if (eq(x, st[i])) {
-			free(x);
-			return st[i];
-		}
-		if (less(x, st[i])) {
-			free(x);
-			break;
-		}
+	if (l > r) {
+		return NULLitem;
 	}
 	
-	return NULLitem;
+	if (eqkey(v, key(st[m]))) {
+		return st[m];
+	}
+	
+	if (l == r) {
+		return NULLitem;
+	}
+	
+	if (lesskey(v, key(st[m]))) {
+		return STsearchR(l, m-1, v);
+	} else {
+		return STsearchR(m+1, r, v);
+	}
 }
 
+Item STsearch(Key v) {
+	return STsearchR(0, N-1, v);
+}
+
+/*
+ * Note that this delete function is not optimized relative to the search
+ * function. In theory it should use a similar algorithm to find
+ * the item and then remove it from the array.
+ */
 void STdelete(Item item) {
 	int i;
 	

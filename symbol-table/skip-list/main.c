@@ -34,6 +34,9 @@ int main(void) {
 	printf("Deleted T\n");
 	
 	STsort(visit);
+	
+	x = STselect(2);
+	printf("key for 2nd item: %c\n", x->key);
 
 	return 0;
 }

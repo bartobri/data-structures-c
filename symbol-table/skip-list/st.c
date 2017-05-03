@@ -92,31 +92,17 @@ void STinsert(Item item) {
 	++N;
 }
 
-/*
-Item STselectR(link h, int k) {
-	int t;
-	
-	if (h == z) {
-		return NULLitem;
-	}
-	
-	t = (h->l == z) ? 0 : h->l->N;
-	
-	if (t > k) {
-		return STselectR(h->l, k);
-	}
-	
-	if (t < k) {
-		return STselectR(h->r, k-t-1);
-	}
-	
-	return h->item;
-}
-
 Item STselect(int k) {
-	return STselectR(head, k);
+	link x;
+	for (x = head->next[0]; x != z && k > 1; x = x->next[0], --k) {
+		;
+	}
+	if (x == z || k < 1) {
+		return NULLitem;
+	} else {
+		return x->item;
+	}
 }
-*/
 
 void STdeleteR(link t, Key v, int k) {
 	link x = t->next[k];
@@ -140,18 +126,6 @@ void STdelete(Key v) {
 	STdeleteR(head, v, lgN);
 	--N;
 }
-
-/*
-void STsortR(link h, void (*visit)(Item)) {
-	if (h == z) {
-		return;
-	}
-	
-	STsortR(h->l, visit);
-	visit(h->item);
-	STsortR(h->r, visit);
-}
-*/
 
 void STsort(void (*visit)(Item)) {
 	link x;

@@ -7,7 +7,7 @@ void STinit(void);
 int  STcount(void);
 void STinsert(Item);
 Item STsearch(Key);
-//Item STselect(int);
+Item STselect(int);
 void STdelete(Key);
 void STsort(void (*visit)(Item));
 

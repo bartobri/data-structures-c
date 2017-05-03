@@ -2,8 +2,6 @@
 #include "item.h"
 #include "st.h"
 
-#include <stdio.h>
-
 typedef struct STnode *link;
 struct STnode {
 	Item item;
@@ -146,7 +144,6 @@ void STinsert(Item item) {
 	
 	// Balancing when N is a power of 2
 	if (head->N > 2 && (head->N & (head->N - 1)) == 0) {
-		//printf("Balancing at %i\n", head->N);
 		head = STbalanceR(head);
 	}
 }

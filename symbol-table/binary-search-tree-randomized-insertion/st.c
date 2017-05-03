@@ -2,8 +2,6 @@
 #include "item.h"
 #include "st.h"
 
-#include <stdio.h>
-
 typedef struct STnode *link;
 struct STnode {
 	Item item;

@@ -6,6 +6,10 @@
 
 #define N      10
 
+void visit(Item item) {
+	printf("%c\n", item->key);
+}
+
 int main(void) {
 	int i;
 	Key keys[N] = { 'E', 'A', 'S', 'Y', 'Q', 'U', 'T', 'I', 'O', 'N' };
@@ -21,11 +25,15 @@ int main(void) {
 		STinsert(x);
 	}
 	
+	STsort(visit);
+	
 	x = STsearch('Y');
 	printf("data for Y: %i\n", x->data);
 	
 	STdelete('T');
 	printf("Deleted T\n");
+	
+	STsort(visit);
 
 	return 0;
 }

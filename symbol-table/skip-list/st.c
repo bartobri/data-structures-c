@@ -151,8 +151,11 @@ void STsortR(link h, void (*visit)(Item)) {
 	visit(h->item);
 	STsortR(h->r, visit);
 }
+*/
 
 void STsort(void (*visit)(Item)) {
-	STsortR(head, visit);
+	link x;
+	for (x = head->next[0]; x != z; x = x->next[0]) {
+		visit(x->item);
+	}
 }
-*/

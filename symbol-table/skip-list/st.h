@@ -9,6 +9,6 @@ void STinsert(Item);
 Item STsearch(Key);
 //Item STselect(int);
 void STdelete(Key);
-//void STsort(void (*visit)(Item));
+void STsort(void (*visit)(Item));
 
 #endif

@@ -11,6 +11,4 @@ Item STselect(int);
 void STdelete(Key);
 void STsort(void (*visit)(Item));
 
-void STdrawtree(void);
-
 #endif

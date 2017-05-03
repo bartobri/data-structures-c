@@ -2,8 +2,6 @@
 #include "item.h"
 #include "st.h"
 
-#include <stdio.h>
-
 typedef struct STnode *link;
 struct STnode {
 	Item item;
@@ -258,38 +256,4 @@ void STsortR(link h, void (*visit)(Item)) {
 
 void STsort(void (*visit)(Item)) {
 	STsortR(head, visit);
-}
-
-
-/*
- * Print tree functions
- */
-
-
-static void printnode(Key x, int n, int h) {
-	int i;
-
-	for (i = 0; i < h; ++i) {
-		printf("    ");
-	}
-
-	//printf("%c(%i)\n", x, n);
-	printf("%c\n", x);
-}
-
-static void showTree(link x, int h) {
-	if (x == z) {
-		printnode('*', 0, h);
-		return;
-	}
-
-	showTree(x->r, h+1);
-
-	printnode(x->item->key, x->N, h);
-
-	showTree(x->l, h+1);
-}
-
-void STdrawtree(void) {
-	showTree(head, 0);
 }

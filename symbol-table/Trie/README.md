@@ -8,5 +8,3 @@ Trie trees are well balanced with near optimal search cost.
 
 Keeping keys in order comes at a slight cost of increased memory
 requirements for more tree nodes.
-
-Note that this implementation does not have a working delete function.

@@ -22,7 +22,7 @@ differ from one example to the next. This is a result of using multiple
 resources when researching these data structures. I plan to go through
 and try to standardize everything.
 
-3. Some algorithms had a README file with a brief description, but most
+3. Some algorithms have a README file with a brief description, but most
 don't. I plan to try to add more documentation to help visitors decide
 which data structure and algorithm is most appropriate for their application.
 

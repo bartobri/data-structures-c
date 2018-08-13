@@ -30,7 +30,7 @@ License
 -------
 
 This program is free software; you can redistribute it and/or modify it
-under the terms of the the MIT License (MIT). See [LICENSE](LICENSE) for more details.
+under the terms of the MIT License (MIT). See [LICENSE](LICENSE) for more details.
 
 Tips
 ----

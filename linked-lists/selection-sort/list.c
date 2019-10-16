@@ -39,11 +39,12 @@ link list_init(int N) {
 
 void list_show(link h) {
 	
-	for (; h->next != NULL; h = h->next) {
+	for (; h->next != NULL; h = h->next)
+	{
 		item_show(h->next->key);
 	}
 	
-	printf("\n");
+	printf (" \n ");
 }
 
 link list_sort(link h) {

@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include "list.h"
 
-link new_link(int i) {
+//Create a new link and set data, pointer
+link new_link(int data) {
 	link x = malloc(sizeof *x);
-	x->item = i;
+	x->item = data;
 	x->next = NULL;
 
 	return x;
